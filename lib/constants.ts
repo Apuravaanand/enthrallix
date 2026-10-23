@@ -1,12 +1,12 @@
 export const SITE_CONFIG = {
     name: 'Enthrallix',
-    domain: 'https://www.enthrallix.com',
+    domain: 'https://enthrallix.netlify.app',
     description:
         'Enthrallix delivers high-performance modern web platforms, software solutions, and robust cloud architectures for businesses.',
     email: 'reachus@enthrallix.com',
     socials: {
         linkedin: 'https://www.linkedin.com/company/enthrallix-it-consultancy-services-private-limited/about/',
-        github: 'https://github.com',
+        // github: 'https://github.com',
         twitter: 'https://x.com/Enthrallix_',
         instagram: 'https://www.instagram.com/enthrallix_/',
         whatsApp: 'https://api.whatsapp.com/send/?phone=%2B919607859800&text&type=phone_number&app_absent=0'
