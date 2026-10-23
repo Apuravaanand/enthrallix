@@ -1,16 +1,21 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Required for static site export (Netlify / GitHub Pages)
-  output: 'export',
-
-  // Disables default image optimization server requirement for static output
+  output: 'export',          // Required for static site export
+  devIndicators: false,      // Hides the floating Next.js / Turbopack dev badge
   images: {
-    unoptimized: true,
+    unoptimized: true,       // Disables default Image Optimization for static export
   },
-
-  // Hides floating Turbopack / Next.js dev indicator badge in local development
-  devIndicators: false,
+  cacheComponents: true,
+  partialPrefetching: true,
+  turbopack: {
+    rules: {
+      "*.css": {
+        loaders: ["@tailwindcss/turbopack"],
+        as: "*.css",
+      },
+    },
+  },
 };
 
 export default nextConfig;
