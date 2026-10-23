@@ -1,13 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',          // Required for static site export
-  devIndicators: false,      // Hides the floating Next.js / Turbopack dev badge
+  // Generate a fully static website in the out/ directory
+  output: "export",
+
+  // Hide the development indicator
+  devIndicators: false,
+
+  // Support static hosting without a Next.js image optimization server
   images: {
-    unoptimized: true,       // Disables default Image Optimization for static export
+    unoptimized: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
+
+  // Preserve your existing Tailwind CSS Turbopack integration
   turbopack: {
     rules: {
       "*.css": {

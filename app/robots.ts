@@ -1,7 +1,7 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next';
 import { SITE_CONFIG } from '@/lib/constants';
 
-export const dynamic = 'force-static';
+export const revalidate = false;
 
 export default function robots(): MetadataRoute.Robots {
     return {
